@@ -7,9 +7,9 @@
     * [0.4 证明方法](chap0/4.md)
 
 ## Part 1
-* [1 Regular Languages](Chap1/regular_languages.md)
-    * [1.1 Finite Automata](Chap1/1_finite_automata.md)
-* [2 Context-Free Languages](Chap2/context_free_languages.md)
+* [1 Regular Languages](chap1/regular_languages.md)
+    * [1.1 Finite Automata](chap1/1_finite_automata.md)
+* [2 Context-Free Languages](chap2/context_free_languages.md)
 
 ## Part 2
 
