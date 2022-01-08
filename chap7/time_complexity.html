@@ -1,0 +1,714 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7 Time Complexity · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1_measuring_complexity.html" />
+    
+    
+    <link rel="prev" href="../chap6/advanced_topic_in_computability_theory.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../chap0/1.html">
+            
+                <a href="../chap0/1.html">
+            
+                    
+                    0.1 Automata, Computability, and Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../chap0/2.html">
+            
+                <a href="../chap0/2.html">
+            
+                    
+                    0.2 数学概念和术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../chap0/3.html">
+            
+                <a href="../chap0/3.html">
+            
+                    
+                    0.3 定义，定理，证明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../chap0/4.html">
+            
+                <a href="../chap0/4.html">
+            
+                    
+                    0.4 证明方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap1/regular_languages.html">
+            
+                <a href="../chap1/regular_languages.html">
+            
+                    
+                    1 Regular Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chap1/1_finite_automata.html">
+            
+                <a href="../chap1/1_finite_automata.html">
+            
+                    
+                    1.1 Finite Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chap1/2_nondeterminism.html">
+            
+                <a href="../chap1/2_nondeterminism.html">
+            
+                    
+                    1.2 Nondeterminism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chap1/3_regular_expressions.html">
+            
+                <a href="../chap1/3_regular_expressions.html">
+            
+                    
+                    1.3  Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chap1/4_nonregular_languages.html">
+            
+                <a href="../chap1/4_nonregular_languages.html">
+            
+                    
+                    1.4 Nonregular Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap2/context_free_languages.html">
+            
+                <a href="../chap2/context_free_languages.html">
+            
+                    
+                    2 Context-Free Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap2/1_context_free_grammars.html">
+            
+                <a href="../chap2/1_context_free_grammars.html">
+            
+                    
+                    2.1 Context-Free Grammars
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../chap2/2_pushdown_automata.html">
+            
+                <a href="../chap2/2_pushdown_automata.html">
+            
+                    
+                    2.2 Pushdown Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../chap2/3_non_context_free_languages.html">
+            
+                <a href="../chap2/3_non_context_free_languages.html">
+            
+                    
+                    2.3 Non-Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../chap2/4_deterministic_context_free_languages.html">
+            
+                <a href="../chap2/4_deterministic_context_free_languages.html">
+            
+                    
+                    2.4 Deterministic Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2: Computability Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chap3/the_church_turing_thesis.html">
+            
+                <a href="../chap3/the_church_turing_thesis.html">
+            
+                    
+                    3 The Church-Turing Thesis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../chap3/1_turing_machines.html">
+            
+                <a href="../chap3/1_turing_machines.html">
+            
+                    
+                    3.1 Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../chap3/2_variants_of_turing_machines.html">
+            
+                <a href="../chap3/2_variants_of_turing_machines.html">
+            
+                    
+                    3.2 Variants of Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../chap3/3_the_definition_of_algorithm.html">
+            
+                <a href="../chap3/3_the_definition_of_algorithm.html">
+            
+                    
+                    3.3 The Definition of Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../chap4/decidability.html">
+            
+                <a href="../chap4/decidability.html">
+            
+                    
+                    4 Decidability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../chap4/1_decidable_languages.html">
+            
+                <a href="../chap4/1_decidable_languages.html">
+            
+                    
+                    4.1 Decidable Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../chap4/2_undecidability.html">
+            
+                <a href="../chap4/2_undecidability.html">
+            
+                    
+                    4.2 Undecidability
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap5/reducibility.html">
+            
+                <a href="../chap5/reducibility.html">
+            
+                    
+                    5 Reducibility
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                <a href="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                    
+                    5.1 Undecidable Problems from Language Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../chap5/2_a_simple_undecidable_problem.html">
+            
+                <a href="../chap5/2_a_simple_undecidable_problem.html">
+            
+                    
+                    5.2 A Simple Undecidable Problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../chap5/3_mapping_reducibility.html">
+            
+                <a href="../chap5/3_mapping_reducibility.html">
+            
+                    
+                    5.3 Mapping Reducibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap6/advanced_topic_in_computability_theory.html">
+            
+                <a href="../chap6/advanced_topic_in_computability_theory.html">
+            
+                    
+                    6 Advanced Topics in Computability Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3: Complexity Theory</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="time_complexity.html">
+            
+                <a href="time_complexity.html">
+            
+                    
+                    7 Time Complexity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="1_measuring_complexity.html">
+            
+                <a href="1_measuring_complexity.html">
+            
+                    
+                    7.1 Measuring Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="2_the_class_p.html">
+            
+                <a href="2_the_class_p.html">
+            
+                    
+                    7.2 The Class P
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="3_the_class_np.html">
+            
+                <a href="3_the_class_np.html">
+            
+                    
+                    7.3 The Class NP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="4_np_completeness.html">
+            
+                <a href="4_np_completeness.html">
+            
+                    
+                    7.4 NP-completeness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="5_additional_np_complete_problems.html">
+            
+                <a href="5_additional_np_complete_problems.html">
+            
+                    
+                    7.5 Additional NP-complete Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7 Time Complexity</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="7-time-complexity">7 Time Complexity</h1>
+<p>decidable&#x95EE;&#x9898;&#xFF08;&#x7B97;&#x6CD5;&#xFF09;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chap6/advanced_topic_in_computability_theory.html" class="navigation navigation-prev " aria-label="Previous page: 6 Advanced Topics in Computability Theory">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1_measuring_complexity.html" class="navigation navigation-next " aria-label="Next page: 7.1 Measuring Complexity">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7 Time Complexity","level":"4.1","depth":1,"next":{"title":"7.1 Measuring Complexity","level":"4.1.1","depth":2,"path":"chap7/1_measuring_complexity.md","ref":"chap7/1_measuring_complexity.md","articles":[]},"previous":{"title":"6 Advanced Topics in Computability Theory","level":"3.4","depth":1,"path":"chap6/advanced_topic_in_computability_theory.md","ref":"chap6/advanced_topic_in_computability_theory.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap7/time_complexity.md","mtime":"2022-01-08T03:53:05.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-08T03:53:25.622Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

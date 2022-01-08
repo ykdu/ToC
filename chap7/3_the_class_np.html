@@ -1,0 +1,732 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7.3 The Class NP · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="4_np_completeness.html" />
+    
+    
+    <link rel="prev" href="2_the_class_p.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../chap0/1.html">
+            
+                <a href="../chap0/1.html">
+            
+                    
+                    0.1 Automata, Computability, and Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../chap0/2.html">
+            
+                <a href="../chap0/2.html">
+            
+                    
+                    0.2 数学概念和术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../chap0/3.html">
+            
+                <a href="../chap0/3.html">
+            
+                    
+                    0.3 定义，定理，证明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../chap0/4.html">
+            
+                <a href="../chap0/4.html">
+            
+                    
+                    0.4 证明方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap1/regular_languages.html">
+            
+                <a href="../chap1/regular_languages.html">
+            
+                    
+                    1 Regular Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chap1/1_finite_automata.html">
+            
+                <a href="../chap1/1_finite_automata.html">
+            
+                    
+                    1.1 Finite Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chap1/2_nondeterminism.html">
+            
+                <a href="../chap1/2_nondeterminism.html">
+            
+                    
+                    1.2 Nondeterminism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chap1/3_regular_expressions.html">
+            
+                <a href="../chap1/3_regular_expressions.html">
+            
+                    
+                    1.3  Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chap1/4_nonregular_languages.html">
+            
+                <a href="../chap1/4_nonregular_languages.html">
+            
+                    
+                    1.4 Nonregular Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap2/context_free_languages.html">
+            
+                <a href="../chap2/context_free_languages.html">
+            
+                    
+                    2 Context-Free Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap2/1_context_free_grammars.html">
+            
+                <a href="../chap2/1_context_free_grammars.html">
+            
+                    
+                    2.1 Context-Free Grammars
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../chap2/2_pushdown_automata.html">
+            
+                <a href="../chap2/2_pushdown_automata.html">
+            
+                    
+                    2.2 Pushdown Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../chap2/3_non_context_free_languages.html">
+            
+                <a href="../chap2/3_non_context_free_languages.html">
+            
+                    
+                    2.3 Non-Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../chap2/4_deterministic_context_free_languages.html">
+            
+                <a href="../chap2/4_deterministic_context_free_languages.html">
+            
+                    
+                    2.4 Deterministic Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2: Computability Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chap3/the_church_turing_thesis.html">
+            
+                <a href="../chap3/the_church_turing_thesis.html">
+            
+                    
+                    3 The Church-Turing Thesis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../chap3/1_turing_machines.html">
+            
+                <a href="../chap3/1_turing_machines.html">
+            
+                    
+                    3.1 Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../chap3/2_variants_of_turing_machines.html">
+            
+                <a href="../chap3/2_variants_of_turing_machines.html">
+            
+                    
+                    3.2 Variants of Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../chap3/3_the_definition_of_algorithm.html">
+            
+                <a href="../chap3/3_the_definition_of_algorithm.html">
+            
+                    
+                    3.3 The Definition of Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../chap4/decidability.html">
+            
+                <a href="../chap4/decidability.html">
+            
+                    
+                    4 Decidability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../chap4/1_decidable_languages.html">
+            
+                <a href="../chap4/1_decidable_languages.html">
+            
+                    
+                    4.1 Decidable Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../chap4/2_undecidability.html">
+            
+                <a href="../chap4/2_undecidability.html">
+            
+                    
+                    4.2 Undecidability
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap5/reducibility.html">
+            
+                <a href="../chap5/reducibility.html">
+            
+                    
+                    5 Reducibility
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                <a href="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                    
+                    5.1 Undecidable Problems from Language Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../chap5/2_a_simple_undecidable_problem.html">
+            
+                <a href="../chap5/2_a_simple_undecidable_problem.html">
+            
+                    
+                    5.2 A Simple Undecidable Problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../chap5/3_mapping_reducibility.html">
+            
+                <a href="../chap5/3_mapping_reducibility.html">
+            
+                    
+                    5.3 Mapping Reducibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap6/advanced_topic_in_computability_theory.html">
+            
+                <a href="../chap6/advanced_topic_in_computability_theory.html">
+            
+                    
+                    6 Advanced Topics in Computability Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3: Complexity Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="time_complexity.html">
+            
+                <a href="time_complexity.html">
+            
+                    
+                    7 Time Complexity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="1_measuring_complexity.html">
+            
+                <a href="1_measuring_complexity.html">
+            
+                    
+                    7.1 Measuring Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="2_the_class_p.html">
+            
+                <a href="2_the_class_p.html">
+            
+                    
+                    7.2 The Class P
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.3" data-path="3_the_class_np.html">
+            
+                <a href="3_the_class_np.html">
+            
+                    
+                    7.3 The Class NP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="4_np_completeness.html">
+            
+                <a href="4_np_completeness.html">
+            
+                    
+                    7.4 NP-completeness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="5_additional_np_complete_problems.html">
+            
+                <a href="5_additional_np_complete_problems.html">
+            
+                    
+                    7.5 Additional NP-complete Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7.3 The Class NP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="73-the-class-np">7.3 The Class NP</h1>
+<h5 id="&#x5B9A;&#x4E49;718&#xFF08;verifier&#xFF09;">&#x5B9A;&#x4E49;7.18&#xFF08;verifier&#xFF09;</h5>
+<p>A <strong><em>verifier</em></strong> for a language <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span> is an algorithm <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi></mrow><annotation encoding="application/x-tex">V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span>, where</p>
+<p>&#x200B;                <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>=</mo><mo>{</mo><mi>w</mi><mi mathvariant="normal">&#x2223;</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">A=\{w|V</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span><span class="mrel">=</span><span class="mopen">{</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit" style="margin-right:0.22222em;">V</span></span></span></span> accepts <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&lt;</mo><mi>w</mi><mo separator="true">,</mo><mi>c</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">&lt;w,c&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mrel">&lt;</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mrel">&gt;</span></span></span></span> for some string <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">c\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span><span class="mclose">}</span></span></span></span>.</p>
+<p>We measure the time of a verifier only in terms of the length of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>, so a <strong><em>polynomial time verifier</em></strong> runs in polynomial time in the length of <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span></span></span></span>.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">c</span></span></span></span> is called a <strong><em>certificate</em></strong>.</p>
+<h5 id="&#x5B9A;&#x4E49;719&#xFF08;np&#xFF09;">&#x5B9A;&#x4E49;7.19&#xFF08;NP&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">NP</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit" style="margin-right:0.13889em;">P</span></span></span></span> is the class of languages that have polynomal time verifiers.</p>
+<h5 id="&#x5B9A;&#x7406;720&#xFF08;nplntm&#xFF09;">&#x5B9A;&#x7406;7.20&#xFF08;NP=L(NTM)&#xFF09;</h5>
+<p>A language is in NP iff it is decided by some nondeterministic polynomial time Turing machine.</p>
+<h5 id="&#x5B9A;&#x4E49;721&#xFF08;ntime-language&#x96C6;&#x5408;&#xFF09;">&#x5B9A;&#x4E49;7.21&#xFF08;NTIME language&#x96C6;&#x5408;&#xFF09;</h5>
+<p>NTIME(t(n))<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><mo>{</mo><mi>L</mi><mi mathvariant="normal">&#x2223;</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">=\{L|L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mrel">=</span><span class="mopen">{</span><span class="mord mathit">L</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">L</span></span></span></span> is a language decided by an O(t(n)) time nondeterministic TM<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>}</mo></mrow><annotation encoding="application/x-tex">\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mclose">}</span></span></span></span></p>
+<h5 id="&#x63A8;&#x8BBA;722&#xFF08;&#xFF09;">&#x63A8;&#x8BBA;7.22&#xFF08;&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>P</mi><mo>=</mo><msub><mo>&#x22C3;</mo><mrow><mi>k</mi></mrow></msub></mrow><annotation encoding="application/x-tex">NP=\bigcup\limits_{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.7500049999999999em;"></span><span class="strut bottom" style="height:1.7521179999999998em;vertical-align:-1.002113em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">=</span><span class="mop op-limits"><span class="vlist"><span style="top:0.902113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.0000049999999998662226em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol small-op">&#x22C3;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>NTIME<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mi>n</mi><mi>k</mi></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">(n^k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:1.099108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>.</p>
+<h5 id="&#x5B9A;&#x7406;724&#xFF08;np&#x4F8B;&#x5B50;&#x2014;&#x2014;clique&#xFF09;">&#x5B9A;&#x7406;7.24&#xFF08;NP&#x4F8B;&#x5B50;&#x2014;&#x2014;CLIQUE&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>L</mi><mi>I</mi><mi>Q</mi><mi>U</mi><mi>E</mi><mo>=</mo><mo>{</mo><mo>&lt;</mo><mi>G</mi><mo separator="true">,</mo><mi>k</mi><mo>&gt;</mo><mi mathvariant="normal">&#x2223;</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">CLIQUE=\{&lt;G,k&gt;|G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mord mathit">Q</span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mrel">=</span><span class="mopen">{</span><span class="mrel">&lt;</span><span class="mord mathit">G</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mrel">&gt;</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit">G</span></span></span></span> is an undirected graph with a $k$-cliqui<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>}</mo></mrow><annotation encoding="application/x-tex">\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mclose">}</span></span></span></span>.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>L</mi><mi>I</mi><mi>Q</mi><mi>U</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">CLIQUE</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="mord mathit">Q</span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span> is in NP.</p>
+<h4 id="pnp-">P=NP ?</h4>
+<p>&#x76EE;&#x524D;&#x5DF2;&#x77E5;&#x7684;NP&#x7684;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x662F;EXP&#x3002;&#x662F;&#x5426;&#x8FD8;&#x6709;&#x66F4;&#x5C0F;&#x7684;&#x4E0A;&#x754C;&#xFF08;&#x751A;&#x81F3;&#x662F;&#x5426;P&#x662F;&#x4E0A;&#x754C;&#xFF09;&#xFF0C;&#x8FD8;&#x4E0D;&#x53EF;&#x77E5;&#x3002;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi>P</mi><mo>&#x2286;</mo></mrow><annotation encoding="application/x-tex">NP\subseteq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mrel">&#x2286;</span></span></span></span>EXPTIME<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>=</mo><msub><mo>&#x22C3;</mo><mrow><mi>k</mi></mrow></msub></mrow><annotation encoding="application/x-tex">=\bigcup\limits_{k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.7500049999999999em;"></span><span class="strut bottom" style="height:1.7521179999999998em;vertical-align:-1.002113em;"></span><span class="base textstyle uncramped"><span class="mrel">=</span><span class="mop op-limits"><span class="vlist"><span style="top:0.902113em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-0.0000049999999998662226em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol small-op">&#x22C3;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span> TIME <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><msup><mn>2</mn><mrow><msup><mi>n</mi><mi>k</mi></msup></mrow></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">(2^{n^k})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.01192em;"></span><span class="strut bottom" style="height:1.26192em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord"><span class="mord mathrm">2</span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="msupsub"><span class="vlist"><span style="top:-0.431em;margin-right:0.07142857142857144em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose">)</span></span></span></span>,</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2_the_class_p.html" class="navigation navigation-prev " aria-label="Previous page: 7.2 The Class P">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="4_np_completeness.html" class="navigation navigation-next " aria-label="Next page: 7.4 NP-completeness">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7.3 The Class NP","level":"4.1.3","depth":2,"next":{"title":"7.4 NP-completeness","level":"4.1.4","depth":2,"path":"chap7/4_np_completeness.md","ref":"chap7/4_np_completeness.md","articles":[]},"previous":{"title":"7.2 The Class P","level":"4.1.2","depth":2,"path":"chap7/2_the_class_p.md","ref":"chap7/2_the_class_p.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap7/3_the_class_np.md","mtime":"2022-01-08T03:53:05.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-08T03:53:25.622Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

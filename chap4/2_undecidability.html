@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.2 Undecidability · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chap5/reducibility.html" />
+    
+    
+    <link rel="prev" href="1_decidable_languages.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    0 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../chap0/1.html">
+            
+                <a href="../chap0/1.html">
+            
+                    
+                    0.1 Automata, Computability, and Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../chap0/2.html">
+            
+                <a href="../chap0/2.html">
+            
+                    
+                    0.2 数学概念和术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../chap0/3.html">
+            
+                <a href="../chap0/3.html">
+            
+                    
+                    0.3 定义，定理，证明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../chap0/4.html">
+            
+                <a href="../chap0/4.html">
+            
+                    
+                    0.4 证明方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap1/regular_languages.html">
+            
+                <a href="../chap1/regular_languages.html">
+            
+                    
+                    1 Regular Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chap1/1_finite_automata.html">
+            
+                <a href="../chap1/1_finite_automata.html">
+            
+                    
+                    1.1 Finite Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chap1/2_nondeterminism.html">
+            
+                <a href="../chap1/2_nondeterminism.html">
+            
+                    
+                    1.2 Nondeterminism
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chap1/3_regular_expressions.html">
+            
+                <a href="../chap1/3_regular_expressions.html">
+            
+                    
+                    1.3  Regular Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chap1/4_nonregular_languages.html">
+            
+                <a href="../chap1/4_nonregular_languages.html">
+            
+                    
+                    1.4 Nonregular Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap2/context_free_languages.html">
+            
+                <a href="../chap2/context_free_languages.html">
+            
+                    
+                    2 Context-Free Languages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap2/1_context_free_grammars.html">
+            
+                <a href="../chap2/1_context_free_grammars.html">
+            
+                    
+                    2.1 Context-Free Grammars
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../chap2/2_pushdown_automata.html">
+            
+                <a href="../chap2/2_pushdown_automata.html">
+            
+                    
+                    2.2 Pushdown Automata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../chap2/3_non_context_free_languages.html">
+            
+                <a href="../chap2/3_non_context_free_languages.html">
+            
+                    
+                    2.3 Non-Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../chap2/4_deterministic_context_free_languages.html">
+            
+                <a href="../chap2/4_deterministic_context_free_languages.html">
+            
+                    
+                    2.4 Deterministic Context-Free Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2: Computability Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chap3/the_church_turing_thesis.html">
+            
+                <a href="../chap3/the_church_turing_thesis.html">
+            
+                    
+                    3 The Church-Turing Thesis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../chap3/1_turing_machines.html">
+            
+                <a href="../chap3/1_turing_machines.html">
+            
+                    
+                    3.1 Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../chap3/2_variants_of_turing_machines.html">
+            
+                <a href="../chap3/2_variants_of_turing_machines.html">
+            
+                    
+                    3.2 Variants of Turing Machines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../chap3/3_the_definition_of_algorithm.html">
+            
+                <a href="../chap3/3_the_definition_of_algorithm.html">
+            
+                    
+                    3.3 The Definition of Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="decidability.html">
+            
+                <a href="decidability.html">
+            
+                    
+                    4 Decidability
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="1_decidable_languages.html">
+            
+                <a href="1_decidable_languages.html">
+            
+                    
+                    4.1 Decidable Languages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.2" data-path="2_undecidability.html">
+            
+                <a href="2_undecidability.html">
+            
+                    
+                    4.2 Undecidability
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap5/reducibility.html">
+            
+                <a href="../chap5/reducibility.html">
+            
+                    
+                    5 Reducibility
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                <a href="../chap5/1_undecidable_problems_from_language_theory.html">
+            
+                    
+                    5.1 Undecidable Problems from Language Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../chap5/2_a_simple_undecidable_problem.html">
+            
+                <a href="../chap5/2_a_simple_undecidable_problem.html">
+            
+                    
+                    5.2 A Simple Undecidable Problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../chap5/3_mapping_reducibility.html">
+            
+                <a href="../chap5/3_mapping_reducibility.html">
+            
+                    
+                    5.3 Mapping Reducibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap6/advanced_topic_in_computability_theory.html">
+            
+                <a href="../chap6/advanced_topic_in_computability_theory.html">
+            
+                    
+                    6 Advanced Topics in Computability Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3: Complexity Theory</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chap7/time_complexity.html">
+            
+                <a href="../chap7/time_complexity.html">
+            
+                    
+                    7 Time Complexity
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../chap7/1_measuring_complexity.html">
+            
+                <a href="../chap7/1_measuring_complexity.html">
+            
+                    
+                    7.1 Measuring Complexity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../chap7/2_the_class_p.html">
+            
+                <a href="../chap7/2_the_class_p.html">
+            
+                    
+                    7.2 The Class P
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../chap7/3_the_class_np.html">
+            
+                <a href="../chap7/3_the_class_np.html">
+            
+                    
+                    7.3 The Class NP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../chap7/4_np_completeness.html">
+            
+                <a href="../chap7/4_np_completeness.html">
+            
+                    
+                    7.4 NP-completeness
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../chap7/5_additional_np_complete_problems.html">
+            
+                <a href="../chap7/5_additional_np_complete_problems.html">
+            
+                    
+                    7.5 Additional NP-complete Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.2 Undecidability</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="42-undecidability">4.2 Undecidability</h1>
+<p>One of the most philosophically important theorems os the theory of computation: There is a specific problem that is algorithmically unsolvable.</p>
+<h5 id="&#x5B9A;&#x4E49;&#xFF08;universal-turing-machine&#xFF09;">&#x5B9A;&#x4E49;&#xFF08;Universal Turing Machine&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>T</mi><mi>M</mi></mrow></msub><mo>=</mo><mo>{</mo><mo>&lt;</mo><mi>M</mi><mo separator="true">,</mo><mi>w</mi><mo>&gt;</mo><mi mathvariant="normal">&#x2223;</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">A_{TM}=\{&lt;M,w&gt;|M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mrel">=</span><span class="mopen">{</span><span class="mrel">&lt;</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mrel">&gt;</span><span class="mord mathrm">&#x2223;</span><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> is a TM and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span> accepts <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>w</mi><mo>}</mo></mrow><annotation encoding="application/x-tex">w\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="mclose">}</span></span></span></span></p>
+<blockquote>
+<p>&#x4F7F;&#x7528;M&#x7684;alphabet&#x5BF9;M&#x8FDB;&#x884C;&#x7F16;&#x7801;</p>
+</blockquote>
+<h5 id="&#x5B9A;&#x7406;&#xFF08;an-undecidable-language&#xFF0C;&#xFF08;&#x6700;&#x57FA;&#x7840;&#x7684;&#x7B97;&#x6CD5;&#x4E0D;&#x53EF;&#x5B9E;&#x73B0;&#x95EE;&#x9898;&#xFF09;&#xFF09;">&#x5B9A;&#x7406;&#xFF08;an undecidable language&#xFF0C;&#xFF08;&#x6700;&#x57FA;&#x7840;&#x7684;&#x201C;&#x7B97;&#x6CD5;&#x4E0D;&#x53EF;&#x5B9E;&#x73B0;&#x95EE;&#x9898;&#x201C;&#xFF09;&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>T</mi><mi>M</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{TM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span> is undecidable</p>
+<blockquote>
+<p>&#x8BC1;&#x660E;&#x65B9;&#x6CD5;&#xFF1A;&#x5BF9;&#x89D2;&#x5316;&#x65B9;&#x6CD5; + countable&#x6982;&#x5FF5; + &#x6784;&#x9020;</p>
+</blockquote>
+<p>&#x6709;&#x6CA1;&#x6709;Turing-recognizable&#x4E4B;&#x5916;&#x7684;language&#x5462;&#xFF1F;</p>
+<blockquote>
+<p>&#x6709;&#x3002;&#x56E0;&#x4E3A;&#xFF1A;</p>
+<p>All TMs is countable&#xFF0C;&#x5373;Turing-recognizable languages is countable</p>
+<p>All languages is uncountable</p>
+<p>&#x6240;&#x4EE5;&#x5FC5;&#x7136;&#x6709;</p>
+</blockquote>
+<h5 id="&#x5B9A;&#x7406;422">&#x5B9A;&#x7406;4.22</h5>
+<p>A Language <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span> is decidable iff <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>L</mi></mrow><mo stretchy="true">&#x203E;</mo></mover></mrow><annotation encoding="application/x-tex">\overline{L}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8833300000000001em;"></span><span class="strut bottom" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord overline"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">L</span></span></span><span style="top:-0.80333em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped overline-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span> are both Turing-recognizable.</p>
+<blockquote>
+<p>&#x8BC1;&#x660E;&#x65B9;&#x6CD5;&#xFF1A;&#x6784;&#x9020;&#x6CD5;</p>
+</blockquote>
+<h5 id="&#x63A8;&#x8BBA;423&#xFF08;an-unrecognizable-language&#xFF09;">&#x63A8;&#x8BBA;4.23&#xFF08;an unrecognizable language&#xFF09;</h5>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><msub><mi>A</mi><mrow><mi>T</mi><mi>M</mi></mrow></msub></mrow><mo stretchy="true">&#x203E;</mo></mover></mrow><annotation encoding="application/x-tex">\overline{A_{TM}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8833300000000001em;"></span><span class="strut bottom" style="height:1.03333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord overline"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span style="top:-0.80333em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped overline-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span> is not Turing-recognizable</p>
+<blockquote>
+<p>&#x53CD;&#x8BC1;&#xFF0C;&#x5982;&#x82E5;&#x662F;Turing-recognizable&#xFF0C;&#x5219;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mrow><mi>T</mi><mi>M</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A_{TM}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">A</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.13889em;">T</span><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span>&#x662F;decidable</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1_decidable_languages.html" class="navigation navigation-prev " aria-label="Previous page: 4.1 Decidable Languages">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chap5/reducibility.html" class="navigation navigation-next " aria-label="Next page: 5 Reducibility">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.2 Undecidability","level":"3.2.2","depth":2,"next":{"title":"5 Reducibility","level":"3.3","depth":1,"path":"chap5/reducibility.md","ref":"chap5/reducibility.md","articles":[{"title":"5.1 Undecidable Problems from Language Theory","level":"3.3.1","depth":2,"path":"chap5/1_undecidable_problems_from_language_theory.md","ref":"chap5/1_undecidable_problems_from_language_theory.md","articles":[]},{"title":"5.2 A Simple Undecidable Problem","level":"3.3.2","depth":2,"path":"chap5/2_a_simple_undecidable_problem.md","ref":"chap5/2_a_simple_undecidable_problem.md","articles":[]},{"title":"5.3 Mapping Reducibility","level":"3.3.3","depth":2,"path":"chap5/3_mapping_reducibility.md","ref":"chap5/3_mapping_reducibility.md","articles":[]}]},"previous":{"title":"4.1 Decidable Languages","level":"3.2.1","depth":2,"path":"chap4/1_decidable_languages.md","ref":"chap4/1_decidable_languages.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["katex"],"pluginsConfig":{"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap4/2_undecidability.md","mtime":"2022-01-08T03:53:05.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-08T03:53:25.622Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
